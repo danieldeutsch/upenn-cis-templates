@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{color,soul}
+\usepackage{graphicx}
+\usepackage{lipsum}
+
+\usepackage{subfiles}
+\usepackage{subcaption}
+ 
+\usepackage{blindtext}
+\usepackage{etoolbox}
+
+\usepackage{main}
+
+\usepackage{booktabs}
+
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+
+\begin{document}
+
+\newcommand{\mainfile}{}
+ 
+\begin{titlepage}
+
+\centering
+{\scshape\LARGE Written Preliminary Examination-II Report \par}
+\vfill
+% Put the title and your name here, not in red
+{\huge\bfseries {\color{red} Title Goes Here} \par}
+\vspace{2cm}
+{\scshape\Large {\color{red} Name Here} \par}
+\vspace{1cm}
+{\scshape\Large Department of Computer and Information Science\par}
+{\scshape\Large University of Pennsylvania\par}
+\vfill
+{\large \today \par}
+\end{titlepage}
+
+%\section{Abstract}
+
+\subfile{sections/abstract}
+
+\pagebreak
+
+\tableofcontents
+
+\pagebreak
+
+\section{Introduction}
+\label{sec:introduction}
+\subfile{sections/introduction}
+
+% Add a \pagebreak in between sections and bibliography
+\pagebreak
+
+\section{First Section}
+\label{sec:firstsection}
+\subfile{sections/section1}
+
+\pagebreak
+
+\section{Second Section}
+\label{sec:secondsection}
+\subfile{sections/section2}
+
+\pagebreak
+
+\bibliographystyle{apalike}
+\bibliography{references/primary}
+ 
+\end{document}
