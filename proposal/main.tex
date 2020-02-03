@@ -1,0 +1,126 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1.0in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{color,soul}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{url}
+\usepackage{latexsym}
+\usepackage{algorithm}
+\usepackage{fancyvrb}
+\usepackage{breqn}
+\usepackage{color}
+\usepackage{xspace}
+\usepackage{arydshln} 
+\usepackage{amsfonts}
+\usepackage[noend]{algpseudocode}
+\usepackage{lipsum}
+%\usepackage[labelsep=quad,indention=10pt]{subfig}
+%\captionsetup*[subfigure]{position=bottom}
+
+\usepackage{subfiles}
+ 
+\usepackage{blindtext}
+\usepackage{etoolbox}
+
+\usepackage{main}
+
+\usepackage{booktabs}
+
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\avg}{avg}
+
+\newcommand\ignore[1]{}
+\newcommand{\lexsub}{\textsc{lexsub}\xspace}
+\newcommand{\ppdbsc}{\textsc{ppdbsc}\xspace}
+\newcommand{\addcos}{\textsc{AddCos}\xspace}
+ 
+\begin{document}
+
+\newcommand{\mainfile}{}
+ 
+\begin{titlepage}
+
+{\centering \scshape\LARGE {\color{red} Your Title Here} \par}
+{\centering \scshape\large Ph.D. Thesis Proposal \par}
+
+\vspace{1cm}
+
+{\centering  {\color{red} Your Name Here} \par}
+{\centering  Department of Computer and Information Science \par}
+{\centering  University of Pennsylvania \par}
+{\centering  \texttt{\color{red} your-email@seas.upenn.edu} \par}
+
+\vspace{12pt}
+{\centering \large \today \par}
+
+\vspace{1cm}
+
+\textit{Ph.D. Thesis Advisor:}
+
+{\color{red} Prof. Chris Callison-Burch}
+
+\vspace{12pt}
+\textit{Ph.D. Thesis Committee:}
+
+% Example committee below. Chair first (with "Chair" in parentheses), external last
+{\color{red} Prof. Lyle Ungar (Chair)}
+
+{\color{red} Prof. Mitch Marcus}
+
+{\color{red} Prof. Dan Roth}
+
+{\color{red} Dr. Marianna Apidianaki}
+
+\subfile{sections/abstract}
+\end{titlepage}
+
+\subfile{sections/publications}
+
+\pagebreak
+
+\tableofcontents
+
+\pagebreak
+
+\section{Introduction} % 3pp
+\label{sec:introduction}
+\subfile{sections/introduction}
+
+% Put \pagebreak in between sections and bibliography
+\pagebreak
+
+\section{First Section}
+\label{sec:firstsection}
+\subfile{sections/section1}
+
+\pagebreak
+
+\section{Second Section}
+\label{sec:secondsection}
+\subfile{sections/section2}
+
+\pagebreak 
+
+\appendix
+
+\section{Appendix}
+\label{sec:appendix}
+\subfile{sections/appendix}
+
+\pagebreak
+
+\bibliographystyle{apalike}
+\bibliography{references/primary}
+ 
+\end{document}
