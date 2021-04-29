@@ -1,0 +1,17 @@
+% This document contains the definitions for commands which were taken from the ACL style file for the bibliography
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{bibstyle}[2018/09/20 TACL formatting]
+
+\RequirePackage{natbib}
+% for citation commands in the .tex, authors can use:
+% \citep, \citet, and \citeyearpar for compatibility with natbib, or
+% \cite, \newcite, and \shortcite for compatibility with older ACL .sty files
+\renewcommand\cite{\citep}  % to get "(Author Year)" with natbib
+\newcommand\shortcite{\citeyearpar}% to get "(Year)" with natbib
+\newcommand\newcite{\citet} % to get "Author (Year)" with natbib
+
+\RequirePackage{hyperref}
+\RequirePackage{xcolor}   % make links dark blue
+\definecolor{darkblue}{rgb}{0, 0, 0.5}
+\hypersetup{colorlinks=true,citecolor=darkblue, linkcolor=darkblue, urlcolor=darkblue}

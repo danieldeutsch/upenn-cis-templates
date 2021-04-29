@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{color}
+\usepackage{subfiles}
+
+% My custom style options for the bibliography
+\usepackage{bibstyle}
+
+% This \dobib command will be used by the subfiles to generate
+% the bibliography when they are compiled individually. Later in
+% this file the command is redefined to do nothing to prevent the
+% subfile references from being regenerated when main.tex is compiled.
+% See https://tex.stackexchange.com/questions/107064/bibliographies-when-using-subfiles
+\newcommand{\dobib}{
+    \bibliography{references/proposal}
+    \bibliographystyle{acl_natbib}
+}
+
+\begin{document}
+    \renewcommand{\dobib}{} % Un-define the command so that the bibliography isn't rendered for each section when compiling the main file
+
+    {\centering \scshape\LARGE {\color{red} Your Title Here} \par}
+    {\centering \scshape\large Ph.D. Thesis Proposal \par}
+    
+    \vspace{1cm}
+    
+    {\centering  {\color{red} Your Name Here} \par}
+    {\centering  Department of Computer and Information Science \par}
+    {\centering  University of Pennsylvania \par}
+    {\centering  \texttt{email@seas.upenn.edu} \par}
+    
+    \vspace{12pt}
+    {\centering \large {\color{red} Date} \par}
+    
+    \vspace{1cm}
+    
+    \textit{Ph.D. Thesis Advisor:}
+    
+    {\color{red} Prof. Dan Roth}
+    
+    \vspace{12pt}
+    \textit{Ph.D. Thesis Committee:}
+    
+    % Example committee below. Chair first (with "Chair" in parentheses), external last
+    {\color{red} Prof. Mitch Marcus (Chair)}
+    
+    {\color{red} Prof. Lyle Ungar}
+    
+    {\color{red} Prof. Chris Callison-Burch}
+    
+    {\color{red} Prof. Mirella Lapata}
+    
+    \subfile{sections/00_abstract}
+    \subfile{sections/00_publications}
+    \pagebreak
+    \tableofcontents
+    \pagebreak
+    \subfile{sections/01_introduction}
+    \pagebreak
+    \bibliography{references/proposal}
+    \bibliographystyle{acl_natbib}
+
+
+\end{document}
